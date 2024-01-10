@@ -1,0 +1,55 @@
+﻿@model ContactAndWorkTimeViewModel
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+
+            <div class="col-lg-6 col-md-12">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">İletişim</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>@Model.Contact.Address</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>@Model.Contact.PhoneNumber</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>@Model.Contact.Email</p>
+                <div class="d-flex pt-2">
+                    @if(Model.Contact.TwitterUrl!=null)
+                    {
+                        <a class="btn btn-outline-light btn-social" href="@Model.Contact.TwitterUrl"><i class="fab fa-twitter"></i></a>
+                    }
+                    @if (Model.Contact.FacebookUrl != null)
+                    {
+                        <a class="btn btn-outline-light btn-social" href="@Model.Contact.FacebookUrl"><i class="fab fa-facebook"></i></a>
+                    }
+                    @if (Model.Contact.InstagramUrl != null)
+                    {
+                        <a class="btn btn-outline-light btn-social" href="@Model.Contact.InstagramUrl"><i class="fab fa-instagram"></i></a>
+                    }
+                    @if (Model.Contact.FoodBasketUrl != null)
+                    {
+                        <a class="btn btn-outline-light btn-social" href="@Model.Contact.FoodBasketUrl"><i class="fas fa-shopping-basket"></i></a>
+                    }
+
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Çalışma Saatlerimiz</h4>
+                <h5 class="text-light fw-normal">@Model.WorkTime.BeginDay - @Model.WorkTime.FinishDay</h5>
+                <p>@Model.WorkTime.BeginTime - @Model.WorkTime.FinishTime</p>
+                <h5 class="text-light fw-normal">Pazar</h5>
+                <p>Tatil</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Sercan MIDIK</a>, Tüm Hakları Saklıdır
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                       <p>Site Çalışmanız için 0506 613 30 89</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

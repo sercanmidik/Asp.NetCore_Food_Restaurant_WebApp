@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/DefaultLayout/_DefaultLayout.cshtml";
+}
+
+@await Component.InvokeAsync("_SpinnerComponentPartial")
+</div>
+@await Component.InvokeAsync("_ServiceComponentPartial")
+@await Component.InvokeAsync("_AboutUsComponentPartial")
+
+@await Component.InvokeAsync("_MenuComponentPartial")
+
+@await Component.InvokeAsync("_BookingComponentPartial")
+
+@await Component.InvokeAsync("_TeamFriendComponentPartial")
+
+@await Component.InvokeAsync("_TestimonialComponentPartial")

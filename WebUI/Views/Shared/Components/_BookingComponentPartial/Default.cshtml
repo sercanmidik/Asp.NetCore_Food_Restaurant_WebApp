@@ -1,0 +1,57 @@
+﻿@model CreateBookingDto
+<div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="row g-0">
+        @await Component.InvokeAsync("_GoogleMapsFrameComponentPartial")
+        <div class="col-md-6 bg-dark d-flex align-items-center">
+            <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+                <h5 class="section-title ff-secondary text-start text-primary fw-normal">Rezervasyon</h5>
+                <h1 class="text-white mb-4">Online Rezervasyon</h1>
+                <form method="post" asp-action="CreateBooking" asp-controller="Booking">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" placeholder="Adınız Soyadınız" asp-for="Name">
+                                <label>Adınız ve Soyadınız</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control"  placeholder="Mail Adresi" asp-for="Email">
+                                <label>Mail Adresiniz</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating date" id="date3" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" asp-for="DateTime" />
+                                <label for="datetime">Tarih</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="select1" asp-for="PersonCount">
+                                    <option value="1">1 Kişi</option>
+                                    <option value="2">2 Kişi</option>
+                                    <option value="3">3 Kişi</option>
+                                    <option value="4">4 Kişi</option>
+                                    <option value="6">6 Kişi</option>
+                                    <option value="8">8 Kişi</option>
+                                    <option value="10">10 Kişi</option>
+                                </select>
+                                <label for="select1">Kişi Sayısı</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Special Request" style="height: 100px" asp-for="SpecialRequest"></textarea>
+                                <label>Özel İstek</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Rezervasyon Oluştur</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/DefaultLayout/_DefaultLayout.cshtml";
+}
+
+@await Html.PartialAsync("/Views/Menu/MenuImagePartial.cshtml")
+
+@await Component.InvokeAsync("_MenuComponentPartial")

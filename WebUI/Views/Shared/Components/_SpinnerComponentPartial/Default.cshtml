@@ -1,0 +1,14 @@
+﻿@model ResultEntryDto
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container my-5 py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-3 text-white animated slideInLeft">@Model.TitleOne<br>@Model.TitleTwo</h1>
+                <p class="text-white animated slideInLeft mb-4 pb-2">@Model.Content</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-end overflow-hidden">
+                <img class="img-fluid" src="~/myimages/spin/@Model.ImageUrl" alt="">
+            </div>
+        </div>
+    </div>
+</div>

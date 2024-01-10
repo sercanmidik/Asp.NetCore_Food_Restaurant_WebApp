@@ -1,0 +1,17 @@
+﻿@model ResultContactDto
+<div class="col-12">
+    <div class="row gy-4">
+        <div class="col-md-4">
+            <h5 class="section-title ff-secondary fw-normal text-start text-primary">Mail İle</h5>
+            <p><i class="fa fa-envelope-open text-primary me-2"></i>@Model.Email</p>
+        </div>
+        <div class="col-md-4">
+            <h5 class="section-title ff-secondary fw-normal text-start text-primary">Telefon</h5>
+            <p><i class="fa-solid fa-phone-volume text-primary me-2"></i>@Model.PhoneNumber</p>
+        </div>
+        <div class="col-md-4">
+            <h5 class="section-title ff-secondary fw-normal text-start text-primary">Yemek Sepeti</h5>
+            <p><a href="@Model.FoodBasketUrl"><i class="fa-solid fa-basket-shopping text-primary me-2"></i>Sipariş İçin</a></p>
+        </div>
+    </div>
+</div>

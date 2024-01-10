@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/DefaultLayout/HeadPartial.cshtml")
+
+<body>
+    
+    <div class="container-xxl bg-white p-0">
+
+        @await Html.PartialAsync("/Views/DefaultLayout/SpinPartial.cshtml")
+        <div class="container-xxl position-relative p-0">
+        @await Component.InvokeAsync("_BrandComponentPartial")
+            @RenderBody()
+        </div>
+        
+ 
+        @await Component.InvokeAsync("_FooterComponentPartial")
+ 
+    </div>
+
+    @await Html.PartialAsync("/Views/DefaultLayout/ScriptPartial.cshtml")
+</body>
+
+</html>
